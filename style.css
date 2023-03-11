@@ -2,51 +2,130 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+@keyframes scale {
+	from { scale: 0;}
+    to {scale: 1;}
 }
 
 body {
     display: flex;
     justify-content: center;
-    
-    height: 100vh;
-}
-
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 75%;
 }
 
 img {
+    padding: 1em 0em 1em 0em;
+    height: 300px;
+    width: 300px;
     display: none;
 }
 
-#first_mem,
-#second_mem,
-#third_mem,
-#fourth_mem {
-    display: none;
-}
-
-
-
-#second_mem:checked ~ img {
-    display: flex;
-}
-
-.items_wrapper {
-    display: flex;
-    flex-direction: column;
+hr {
+   color: aquamarine; 
+   size: 5em;
 }
 
 label {
     display: flex;
     justify-content: space-between;
+    color:rgb(36, 125, 173);
     align-items: center;
     width: 100%;
 }
 
-.minus {
+h1 {
+    font-size: 3em;
+    margin-bottom: .3em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+.wrapper {
+    padding-top: 2em;
+
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    
+}
+
+#first_mem,
+#second_mem,
+#third_mem,
+#fourth_mem,
+#fifth_mem {
     display: none;
 }
+
+.items_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    
+}
+
+
+.input_wrapper {
+    width: 100%;
+}
+
+.plus {
+    visibility: hidden;
+    transform: rotate(0);
+}
+
+.items_wrapper > :checked ~ img { 
+    display: block;
+    animation: scale 1s;
+}
+
+
+.items_wrapper > :checked ~ .input_wrapper .plus {
+    transform: rotate(45deg) ;
+ }
+
+.items_wrapper:hover img { 
+    display: block;
+    animation: scale 1s;
+}
+
+.wrapper:hover * .plus{
+    visibility: visible;   
+}
+
+.wrapper:hover * {
+    cursor: pointer;
+}
+
+.wrapper:hover * label {
+    color: black;
+}
+
+.items_wrapper > :checked ~ .input_wrapper label {
+    color: black;
+ }
+
+ .items_wrapper > :active ~ .input_wrapper label {
+    color: rgb(22, 125, 125);
+ }
+
+ .items_wrapper:active img {
+    opacity: 0.5;
+ }
+
+.filler {
+    fill:red;
+}
+
+#SVGRepo_iconCarrier {
+    fill: black;
+    stroke: black;
+}
+

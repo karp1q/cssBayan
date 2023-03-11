@@ -50,7 +50,6 @@ h2 {
     display: flex;
     flex-direction: column;
     width: 70%;
-    
 }
 
 #first_mem,
@@ -121,16 +120,6 @@ h2 {
  .items_wrapper:active img {
     opacity: 0.5;
  }
-
-.filler {
-    fill:red;
-}
-
-#SVGRepo_iconCarrier {
-    fill: black;
-    stroke: black;
-}
-
 
 @media (max-width: 320px) {
     h1 {

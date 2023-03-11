@@ -14,5 +14,39 @@ body {
 .wrapper {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    width: 75%;
 }
 
+img {
+    display: none;
+}
+
+#first_mem,
+#second_mem,
+#third_mem,
+#fourth_mem {
+    display: none;
+}
+
+
+
+#second_mem:checked ~ img {
+    display: flex;
+}
+
+.items_wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.minus {
+    display: none;
+}
